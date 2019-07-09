@@ -1,0 +1,59 @@
+body {
+  background-color: #00002a;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 300px;
+  width: 300px;
+  /* border: 2px solid white; */
+}
+.loader {
+  height: 300px;
+  width: 80px;
+  background-image: linear-gradient(45deg, #00bbcc, #009cd4);
+  border-radius: 80px;
+  box-shadow: 0 0 22px 2px rgba(0, 187, 204, 0.25);
+  animation: crawl 3s infinite;
+}
+@keyframes crawl {
+  12.5% {
+    height: 80px;
+    width: 80px;
+  }
+  25% {
+    height: 80px;
+    width: 300px;
+    transform: translateX(0);
+  }
+  37.5% {
+    height: 80px;
+    width: 80px;
+    transform: translateX(220px);
+  }
+  50% {
+    height: 300px;
+    width: 80px;
+    transform: translateX(220px);
+  }
+  62.5% {
+    height: 80px;
+    width: 80px;
+    transform: translate(220px, 220px);
+  }
+  75% {
+    height: 80px;
+    width: 300px;
+    transform: translateY(220px);
+  }
+  87.5% {
+    height: 80px;
+    width: 80px;
+    transform: translateY(220px);
+  }
+}
